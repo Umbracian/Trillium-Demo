@@ -1,0 +1,42 @@
+﻿//Colors
+
+$trillium-color-1: rgba(50, 19, 91, 1);
+$trillium-color-2: rgba(47, 241, 137, 1);
+$trillium-color-3: rgb(50, 19, 91);
+$trillium-color-4: rgba(208, 208, 208, 1);
+$trillium-color-5: #616161;
+
+//Generic colors
+$white: #fff;
+$black: #000;
+
+//Functions
+@mixin font($font-family, $font-size, $font-weight) {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+//Fonts
+$Font-1: 'Rubik', sans-serif;
+
+$Font-4: "Font Awesome 5 Free";
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Extra small screen / phone
+$screen-xs-min: 0;
+// Small screen / tablet
+$screen-sm-min: 576px;
+// Medium screen / desktop
+$screen-md-min: 768px;
+// Large screen / wide desktop
+$screen-lg-min: 992px;
+// Extra Large screen / wide desktop
+$screen-xlg-min: 1200px;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-max: ($screen-xlg-min - 1);

@@ -1,0 +1,246 @@
+﻿@import "_variables.scss";
+
+.header {
+    .nav-container {
+        height: 75px;
+        padding-top: 25px;
+
+        .social-media-section {
+            a {
+                position: relative;
+                top: 0;
+                padding-right: 25px;
+                text-decoration: none;
+                transition: all .2s ease;
+
+                @media screen and (max-width: $screen-sm-max) {
+                    padding-right: 10px;
+                }
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                &:hover {
+                    top: -3px;
+                }
+            }
+        }
+    }
+}
+
+.content {
+    min-height: 75vh;
+
+    .page-content {
+        padding: 50px 0;
+        background-color: $trillium-color-1;
+
+        .progress-bar-w-steps {
+            width: 100%;
+            list-style: none;
+            list-style-image: none;
+            margin-bottom: 0;
+            padding: 0;
+
+            li {
+                float: left;
+                text-align: center;
+                position: relative;
+                width: 19%;
+
+                &:first-of-type {
+                    .step {
+                        &:before {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    .step {
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.active {
+                    .step {
+                        border: 5px solid $trillium-color-2;
+                        background-color: transparent;
+                        border-radius: 50%;
+                        line-height: 1.4;
+                        width: 1.4em;
+                        height: 1.4em;
+
+                        &:after {
+                            margin-top: 3px;
+                        }
+                    }
+                }
+
+                .name {
+                    display: block;
+                    vertical-align: bottom;
+                    text-align: center;
+                    margin-bottom: 16px;
+                    color: $white;
+                }
+
+                .step {
+                    border: 3px solid $trillium-color-2;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    line-height: 1.2;
+                    width: 1.2em;
+                    height: 1.2em;
+                    display: inline-block;
+                    z-index: 0;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        background-color: $trillium-color-2;
+                        height: 0.2em;
+                        width: 46%;
+                        position: absolute;
+                        margin-top: 5px;
+                        left: 0;
+                        z-index: 999;
+
+                        @media screen and (max-width: $screen-sm-max) {
+                            width: 35%;
+                        }
+                    }
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        background-color: $trillium-color-2;
+                        height: 0.2em;
+                        width: 46%;
+                        position: absolute;
+                        margin-top: 5px;
+                        right: 0;
+                        z-index: 999;
+
+                        @media screen and (max-width: $screen-sm-max) {
+                            width: 35%;
+                        }
+                    }
+
+                    span {
+                        opacity: 0.3;
+                    }
+                }
+            }
+        }
+
+        .border-section {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 50px;
+
+            @media screen and (max-width: $screen-sm-max) {
+                padding-bottom: 15px;
+            }
+
+            hr {
+                width: 100%;
+                background-color: $white;
+            }
+        }
+
+        .second-col {
+            @media screen and (max-width: $screen-sm-max) {
+                padding-top: 25px;
+            }
+        }
+
+        .title {
+            @include font($Font-1, 20px, 400);
+            color: $white;
+        }
+
+        .description {
+            @include font($Font-1, 15px, 400);
+            color: $white;
+            padding-bottom: 100px;
+
+            @media screen and (max-width: $screen-sm-max) {
+                padding-bottom: 65px;
+            }
+        }
+
+        .btn-action {
+            display: block;
+            height: 37px;
+            width: 170px;
+            background-color: $trillium-color-2;
+            color: $trillium-color-3;
+            @include font($Font-1, 16px, 700);
+            text-align: center;
+            padding: 7px;
+            text-decoration: none;
+            transition: all .2s ease;
+            position: absolute;
+            bottom: 0;
+
+            &:hover {
+                background-color: $white;
+                color: $trillium-color-2;
+            }
+
+            &.right-0 {
+                right: 0;
+
+                @media screen and (max-width: $screen-sm-max) {
+                    right: auto;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $trillium-color-4;
+    padding: 40px 0;
+    width: 100%;
+
+    @media screen and (min-width: $screen-md-min) {
+        height: 260px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            padding-bottom: 30px;
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            a {
+                @include font($Font-1, 18px, 500);
+                color: $trillium-color-5;
+            }
+        }
+    }
+
+    .footer-logo {
+        @media screen and (min-width: $screen-md-min) {
+            position: absolute;
+            right: 0;
+            bottom: 50px;
+        }
+
+        @media screen and (max-width: $screen-sm-max) {
+            float: left !important;
+            padding-top: 30px;
+        }
+    }
+}

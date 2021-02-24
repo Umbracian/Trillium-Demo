@@ -1,0 +1,11 @@
+﻿.page-content {
+  background-color: #32135b;
+}
+.page-content .btn-action {
+  height: 37px;
+  width: 170px;
+  background-color: #2ff189;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
